@@ -15,8 +15,8 @@ registerDoctoresController.register = async (req, res) => {
 
   try {
     //Verificamos si el empleado ya existe
-    const existEmployee = await EmployeeModel.findOne({ email });
-    if (existEmployee) {
+    const existDoctores = await DoctorModel.findOne({ email });
+    if (existDoctores) {
       return res.json({ message: "Doctor ya existe" });
     }
 
